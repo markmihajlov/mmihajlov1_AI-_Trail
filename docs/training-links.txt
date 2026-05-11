@@ -1,0 +1,17 @@
+AI SDLC Interactive Training: https://paycor-ai-sdlc-training-a9azfbfff5ctbnd9.northcentralus-01.azurewebsites.net/
+
+Prior session recording: https://urldefense.com/v3/__https:/paychex.webex.com/paychex/ldr.php?RCID=0512486bc88d7dd55f69e3a4bb79b14f__;!!PIfy-9xbww!DoB-EbwZsGRkxtZ5lDACZpbfb-xUG0pzNg7FkY0Mop5Qe68hXbMO4suI9JgybrVDFfoU7sRaTtVdXPfvEpmg$
+
+AI SDLC Documentation: https://paychex.sharepoint.com/:u:/s/pycr_EnterpriseArchitectureTeam/IQBwfNswA2IcRZ26PLm9iFzXAaND2gGQSvylWw-lghhG-UU?e=Yk9FjR
+
+Enhanced Context Setup: https://paychex.sharepoint.com/:u:/s/pycr_EnterpriseArchitectureTeam/IQCse9s7GXigTpF1UUPXdB8iAQSmAgcLcO7VAxzFZvJuOWQ?e=FQkRcP
+
+Multi-repo workspaces: https://paychex.sharepoint.com/:u:/s/pycr_EnterpriseArchitectureTeam/IQCHFDD09Ha9S6tZyH6C-YaAAWwzfD9i1v91eR1gq6kyew4?e=ijzgoN
+
+AI Attribution and Tagging: https://paychex.sharepoint.com/:u:/s/pycr_EnterpriseArchitectureTeam/IQDU4oyDOSbgQrf55PQ5PXjVAX85lzefNB7JOdOHSwO48A0?e=C7rtZg
+
+Using AI for code reviews - ADO: https://github.com/PaycorInc/Paycor.PR.Reviewer?tab=readme-ov-file#how-to-add-a-custom-prompt
+
+Using AI for Code Review - GitHub: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review
+
+Using AI for Local Code Review - GitHub Copilot: https://docs.github.com/en/copilot/how-tos/use-copilot-agents/request-a-code-review/use-code-review?tool=vscode

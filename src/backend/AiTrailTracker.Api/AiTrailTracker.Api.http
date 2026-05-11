@@ -1,0 +1,6 @@
+@AiTrailTracker.Api_HostAddress = http://localhost:5161
+
+GET {{AiTrailTracker.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
