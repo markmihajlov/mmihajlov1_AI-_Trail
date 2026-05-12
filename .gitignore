@@ -1,0 +1,15 @@
+# Build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+
+# VS Code
+.vs/
+
+# OS files
+Thumbs.db
+.DS_Store
