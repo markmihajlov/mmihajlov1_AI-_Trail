@@ -139,3 +139,4 @@ C:\Users\mmihajl1\source\repos\mmihajlov1_AI-_Trail\src\backend\AiTrailTracker.A
 C:\Users\mmihajl1\source\repos\mmihajlov1_AI-_Trail\src\backend\AiTrailTracker.Api.Tests\obj\Debug\net10.0\AiTrailTracker.Api.Tests.pdb
 C:\Users\mmihajl1\source\repos\mmihajlov1_AI-_Trail\src\backend\AiTrailTracker.Api.Tests\obj\Debug\net10.0\AiTrailTracker.Api.Tests.genruntimeconfig.cache
 C:\Users\mmihajl1\source\repos\mmihajlov1_AI-_Trail\src\backend\AiTrailTracker.Api.Tests\obj\Debug\net10.0\ref\AiTrailTracker.Api.Tests.dll
+C:\Users\mmihajl1\source\repos\mmihajlov1_AI-_Trail\src\backend\AiTrailTracker.Api.Tests\obj\Debug\net10.0\AiTrailTracker.Api.Tests.sourcelink.json

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AiTrailTracker.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+176cda29fa7e5352f5a42c517740ec67cd6550ae")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b3aaf442dbebc43e918d26fb71e0ee038b1a6aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("AiTrailTracker.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AiTrailTracker.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

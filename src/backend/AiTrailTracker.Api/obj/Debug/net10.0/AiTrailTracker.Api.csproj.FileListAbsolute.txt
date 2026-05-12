@@ -64,3 +64,4 @@ C:\Users\mmihajl1\source\repos\mmihajlov1_AI-_Trail\src\backend\AiTrailTracker.A
 C:\Users\mmihajl1\source\repos\mmihajlov1_AI-_Trail\src\backend\AiTrailTracker.Api\obj\Debug\net10.0\AiTrailTracker.Api.pdb
 C:\Users\mmihajl1\source\repos\mmihajlov1_AI-_Trail\src\backend\AiTrailTracker.Api\obj\Debug\net10.0\AiTrailTracker.Api.genruntimeconfig.cache
 C:\Users\mmihajl1\source\repos\mmihajlov1_AI-_Trail\src\backend\AiTrailTracker.Api\obj\Debug\net10.0\ref\AiTrailTracker.Api.dll
+C:\Users\mmihajl1\source\repos\mmihajlov1_AI-_Trail\src\backend\AiTrailTracker.Api\obj\Debug\net10.0\AiTrailTracker.Api.sourcelink.json

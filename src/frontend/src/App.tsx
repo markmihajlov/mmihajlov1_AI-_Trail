@@ -1,4 +1,5 @@
 // Modified by AI on 05/11/2026. Edit #1.
+// Modified by AI on 05/12/2026. Edit #2.
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ThemeProvider, CssBaseline } from '@mui/material';
@@ -9,6 +10,7 @@ import DashboardPage from './pages/DashboardPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
 import ReviewSubmissionPage from './pages/ReviewSubmissionPage';
 import ParticipantDetailPage from './pages/ParticipantDetailPage';
+import TeamProgressPage from './pages/TeamProgressPage';
 import ProtectedRoute from './components/ProtectedRoute';
 
 const queryClient = new QueryClient();
@@ -28,6 +30,11 @@ function NavBar() {
             {me.isAdmin && (
               <Button color="inherit" component={Link} to="/admin">
                 Admin
+              </Button>
+            )}
+            {me.isAdmin && (
+              <Button color="inherit" component={Link} to="/admin/teams">
+                Teams
               </Button>
             )}
           </Box>
@@ -73,6 +80,14 @@ function AppRoutes() {
           element={
             <ProtectedRoute requiredRole="admin">
               <ParticipantDetailPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/teams"
+          element={
+            <ProtectedRoute requiredRole="admin">
+              <TeamProgressPage />
             </ProtectedRoute>
           }
         />
