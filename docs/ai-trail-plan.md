@@ -274,3 +274,125 @@ To build a tracking system for individual progress, the system should capture:
 5. **Timestamps** — When each criterion was completed and when badge advancement occurred
 6. **Guild information** — Guild name, members, meeting attendance
 7. **Story/delivery metrics** — Number of stories completed with AI, percentage of AI-assisted development
+
+---
+
+## Other Topics — Agent Skills, Custom Agents, and Subagents
+
+<!-- Modified by AI on 05/12/2026. Edit #2. -->
+
+### Agent Skills
+
+[About agent skills — GitHub Docs](https://docs.github.com/en/copilot/customizing-copilot/extending-copilot-coding-agent-with-agent-skills)
+
+Agent skills are folders of instructions, scripts, and resources that coding agents conditionally load when relevant to improve performance on specialized tasks. They can be used to create specific behaviors that get triggered based on the prompt and context, such as running specific steps for a certain type of change.
+
+They follow an open standard used across multiple AI systems — including Copilot coding agent, GitHub Copilot CLI, and agent mode in VS Code.
+
+#### Where Skills Live
+
+| Scope | Location | Works With |
+|-------|----------|------------|
+| Project (repo-specific) | `.github/skills/` | All agents |
+| Personal (cross-project) | `~/.copilot/skills/` | Coding agent & Copilot CLI only |
+
+Organization and enterprise-level skills are coming soon.
+
+#### Creating Your Own Skill
+
+1. Create a folder at `.github/skills/my-skill-name/`
+2. Inside the folder, add a `SKILL.md` describing what the skill does and step-by-step instructions for the agent
+3. Optionally include templates, reference files or scripts the agent should use
+4. Copilot loads the skill automatically when the context is relevant, or you can reference it explicitly in a prompt
+
+#### Example Skills From the Community
+
+Here are some good examples of community-developed skills:
+
+- [github/awesome-copilot](https://github.com/github/awesome-copilot) — community-created Copilot skills
+- [anthropics/skills](https://github.com/anthropics/skills) — skills from Anthropic
+
+As a starting point, you can clone or copy a skill folder into `.github/skills/` in your repo and Copilot will pick it up automatically.
+
+### Custom Agents
+
+[Creating custom agents for GitHub Copilot](https://docs.github.com/en/copilot/customizing-copilot/creating-custom-agents-for-github-copilot)
+
+Custom agents let you create specialized agents with tailored instructions, a curated set of tools, and a focused system prompt — all defined in a `.agent.md` file stored in `.github/agents/`. You might create one when you want a dedicated agent for a specific workflow, such as a planning or research agent that produces structured implementation docs without generating any code. Unlike instruction files (which apply broadly to every interaction), custom agents are explicitly selected from the chat dropdown, letting you switch between purpose-built configurations depending on the task at hand.
+
+Custom agents can also be chained together, handing off work between them.
+
+### Subagents
+
+[Subagents in Visual Studio Code — VS Code Docs](https://code.visualstudio.com/docs/copilot/chat/subagents)
+
+Subagents let the main agent delegate focused subtasks — such as researching a topic, analyzing code, or reviewing changes — to independent AI agents that each run in their own isolated context window. Because a subagent starts with a clean slate, it doesn't add noise or bloat to the main conversation; only its final result is returned. VS Code can also run multiple subagents in parallel, so multi-part tasks like simultaneous security, performance, and architecture reviews can complete much faster than doing them sequentially.
+
+You don't always need to invoke subagents manually — the main agent often decides when context isolation is helpful and spawns them automatically as long as the `runSubagent` tool is enabled. You can nudge the behavior by phrasing prompts to suggest parallel or isolated work (e.g., "analyze security, performance, and accessibility simultaneously"). For repeatable workflows, the best approach is to define when subagents should be used directly in a custom agent's instructions so the behavior is consistent without requiring you to prompt for it each time.
+
+Subagents can also be paired with custom agents: a coordinator `.agent.md` can specify which worker agents it delegates to using the `agents` frontmatter property, and each worker can have its own model, tools, and instructions tailored to its specific role.
+
+---
+
+## Support — Using AI to Answer Questions (Optional)
+
+<!-- Modified by AI on 05/12/2026. Edit #3. -->
+
+### Using Code as Context to Solve Work Order Questions
+
+One of the most immediately practical applications of AI in a support context is using the actual codebase as context when answering work order (WO) or incident questions — rather than relying on documentation alone or tribal knowledge.
+
+### The Problem
+
+Support and engineering teams often struggle to answer questions like:
+
+- "How does this calculation actually work?"
+- "Why does this edge case behave this way?"
+- "What happens when field X is null?"
+
+The answer is always in the code — but finding it, reading it, and explaining it takes time.
+
+### The Solution: Code as Context
+
+With a coding agent, you can point directly at the relevant code and ask it to explain the behavior in plain language.
+
+**Example:**
+
+- Attaching any relevant redacted file(s) to the Copilot chat. Avoid putting client data into the chat.
+- Asking: "A customer is reporting that [describes the behavior]. Based on this code, explain why this happens and under what conditions."
+- Using the agent's explanation to draft a precise WO response — with the relevant code logic cited
+
+### How to Apply This Pattern
+
+**Step 1: Identify the relevant code**
+
+Ask the agent to find it if you're not sure:
+
+```
+"Find the code responsible for [describe the behavior or calculation].
+Search the codebase and show me the relevant files."
+```
+
+**Step 2: Ask for an explanation**
+
+```
+"Read [FileName] and explain in plain English how [the specific behavior]
+works. Include what conditions cause [the reported behavior]."
+```
+
+**Step 3: Ask for a WO response draft**
+
+```
+"Based on your analysis, draft a customer-facing explanation of why
+[the behavior] occurs and what the expected behavior is."
+```
+
+### Tips for Support Use Cases
+
+| Tip | Detail |
+|-----|--------|
+| Scope your context | Attach only the relevant files — too much context degrades accuracy |
+| Be specific about the behavior | The more precise your description, the better the agent's analysis |
+| Ask for conditions | Ask "under what conditions does this happen?" — not just "what does this code do?" |
+| Verify the explanation | Always have a developer confirm the agent's explanation before sending to customers |
+| Never include PII in prompts | Use anonymized data when describing customer scenarios — never paste real customer records |
